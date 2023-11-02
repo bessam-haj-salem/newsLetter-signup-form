@@ -1,0 +1,38 @@
+<div class="container">
+  <div class="title">Stay updated!</div>
+  <div class="pgh">
+    Join 60,000+ product managers receiving monthly updates on:
+  </div>
+  <div class="list">
+    <div class="list__description">
+      <img src="../../assets/images/icon-list.svg" alt="" class="checkbox" />
+      <div class="description">Product discovery and building what matters</div>
+    </div>
+    <div class="list__description">
+      <img src="../../assets/images/icon-list.svg" alt="" class="checkbox" />
+      <div class="description">Measuring to ensure updates are a success</div>
+    </div>
+    <div class="list__description">
+      <img src="../../assets/images/icon-list.svg" alt="" class="checkbox" />
+      <div class="description">And much more!</div>
+    </div>
+  </div>
+  <div class="emailForm">
+    <div class="label__container">
+      <div class="emailForm__label">Email address</div>
+      <div class="emailForm__label error" *ngIf="emailForm.invalid && emailForm.touched">Valid email required</div>
+
+    </div>
+    <input
+      placeholder="email@company.com"
+      type="text"
+      [ngClass]="
+        emailForm.invalid && emailForm.touched ? 'emailInput emailInputError' : 'emailInput'
+      "
+      [formControl]="emailForm"
+    />
+  </div>
+  <div class="subscribeButton" (click)="onSubmit()">
+    Subscribe to monthly newsletter
+  </div>
+</div>

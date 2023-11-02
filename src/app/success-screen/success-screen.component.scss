@@ -1,0 +1,20 @@
+@import "../../styles/styles.scss";
+.container {
+  .dismiss {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0.2rem solid transparent;
+    background-color: $darkSlateGrey;
+    color: $white;
+    padding: 1rem;
+    font-family: $roboto;
+    font-size: 1.6rem;
+    font-weight: 300;
+    border-radius: 0.7rem;
+  }
+  .dismiss:hover {
+    background-color: $tomato;
+  
+  }
+}

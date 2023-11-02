@@ -1,0 +1,20 @@
+<div class="container" *ngIf="!success">
+  <div class="container__image">
+    <div class="container__img" alt=""></div>
+  </div>
+  <div class="container__emailForm">
+    <app-email-form (success)="onValidation($event)"></app-email-form>
+  </div>
+</div>
+<div *ngIf="success" class="container__success">
+  <div class="wrapper">
+    <img src="../assets/images/icon-success.svg" class="success__img" alt="" />
+    <div class="title">Thanks for subscribing!</div>
+    <div class="pgh">
+      A confirmation email has been sent to email@co.co. Please open it and
+      click the button inside to confirm your subscription.
+    </div>
+  </div>
+
+  <div class="dismiss" (click)="dismiss()">Dismiss message</div>
+</div>
